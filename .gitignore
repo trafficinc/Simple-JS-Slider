@@ -4,8 +4,6 @@ jasmine/MIT.LICENSE
 jasmine/spec/javascripts/*
 jasmine/spec/PlayerSpec.js
 jasmine/spec/SpecHelper.js
-jasmine/src/jasmine-jquery.js
-jasmine/src/Player.js
-jasmine/src/Song.js
+jasmine/src/*
 node_modules/*
 package.json
