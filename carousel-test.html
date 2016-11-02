@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RB Slider</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<style>
+    .top {
+        padding-top:40px
+    }
+
+    .rbslider {
+        overflow: auto;
+        margin: 0;
+        padding: 0
+    }
+
+    .rbslider-wrap {
+        position: relative
+    }
+
+    .rbslider-wrap.rbslider-carousel > li {
+        float: left
+    }
+
+    .rbslider-vertical > ul {
+        height: 100%
+    }
+
+    .rbslider-vertical li {
+        float: none;
+        width: 100%
+    }
+
+    .unslider-fade {
+        position: relative
+    }
+
+    .rbslider-fade .rbslider-wrap li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 8
+    }
+
+    .rbslider-fade .rbslider-wrap li.rbslider-active {
+        z-index: 10
+    }
+
+    .rbslider li, 
+    .rbslider ol, 
+    .rbslider ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: none
+    }
+
+    .rbslider-arrow {
+        z-index: 2;
+        cursor: pointer;
+        color: #cacaca;
+        font-size: 2em;
+    }
+
+    .rbslider-arrow.prev {
+        float: left;
+    }
+
+    .rbslider-arrow.next {
+        float: right;
+    }
+
+    a.rbslider-arrow.next,
+    a.rbslider-arrow.prev {
+        text-decoration: none;
+    }
+
+    .rbslider-nav ol {
+        list-style: none;
+        text-align: center;
+    }
+    .rbslider-nav ol li {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 4px;
+        background: transparent;
+        border-radius: 5px;
+        overflow: hidden;
+        text-indent: -999em;
+        border: 2px solid #fff;
+        cursor: pointer;
+    }
+    .rbslider-nav ol li.rbslider-active {
+        background: #fff;
+        cursor: default;
+    }
+
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+    <script src="lib/rbslider.js"></script>
+
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row top">
+
+            <div class="col-md-8">
+
+
+                <div class="demo">
+                    <div>
+                        <div id="carousel">
+                            <ul>
+
+                                <li><img class="img-responsive" src="https://c4.staticflickr.com/6/5336/30720520915_530a092960_k.jpg"></li>
+
+                                <li><img class="img-responsive" src="https://c2.staticflickr.com/9/8338/29660612641_c7a7be2788_k.jpg"></li>
+
+                                <li><img class="img-responsive" src="https://c3.staticflickr.com/6/5774/30677923466_65aa1df9db_k.jpg"></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $("#carousel").rbslider({
+                        autoplay: false
+                    });
+                </script>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
